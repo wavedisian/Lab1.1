@@ -59,15 +59,18 @@ public class ControlStructures
 	public static boolean isprime(int x)
 	{
 		int G = 1;
-		while(G<=x/2)
+		while(G<=(x/2))
 		{
-			if(x%G == 0);
+			if(x%G!=0)
 			{
-			    G++;
+				G++;
+			}
+			else
+			{
 				return(false);
 			}
-			
 		};
 		return(true);
+		
 	}
 }
