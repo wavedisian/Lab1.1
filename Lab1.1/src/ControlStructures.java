@@ -38,16 +38,16 @@ public class ControlStructures
 		int p=0;
 		while(p<lim)
 		{
-			if(p%10==0)
+			if((p%10==0)&&(isprime(x)==true))
 			{
 				System.out.println();
 			}
-			if(isprime(x) == true);
+			if(isprime(x) == true)
 			{
 				
 				System.out.print(x + " ");
 				p++;
-			};
+			}
 			if(isprime(x) == false)
 			{
 				System.out.print("");
@@ -58,18 +58,13 @@ public class ControlStructures
 	}
 	public static boolean isprime(int x)
 	{
-		int G = 1;
-		while(G<=(x/2))
+		for(int G=2; G<(x/2); G++)
 		{
-			if(x%G!=0)
-			{
-				G++;
-			}
-			else
+			if(x%G==0)
 			{
 				return(false);
 			}
-		};
+		}
 		return(true);
 		
 	}
